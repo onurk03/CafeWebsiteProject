@@ -1,0 +1,34 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 50px;
+    grid-auto-flow: column;
+}
+
+.grid-item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 15;
+    background-size: cover;
+    background-image: url("../images/grilledcheese1.jpg");
+    background-repeat: no-repeat;
+}
+
+.grid-item2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 14;
+    grid-row-end: 30;
+    background-color: white;
+
+}
+
+.grid-item3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 29;
+    grid-row-end: 35;
+    background-color: rgba(154, 10, 10, 0.90);
+    border-top: 2px solid black;
+}

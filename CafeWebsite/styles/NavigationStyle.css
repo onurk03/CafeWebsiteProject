@@ -1,0 +1,61 @@
+.nav-bar {
+    overflow: auto;
+    background-color: white;
+    padding: 1.7em;
+    position: sticky;
+    top:0;
+    width: auto;
+    opacity: 100!important;
+    border-bottom: 2px solid black;
+}
+
+.brand-name {
+    position: relative;
+    font-family: "papyrus", serif;
+    font-style: oblique;
+    font-size: 1.9em;
+    color: black;
+    float: left;
+    padding-top: 0.9em;
+    margin: 0;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 1.5em;
+    overflow: hidden;
+    float: right;
+}
+
+.active  {
+    background-color: grey;
+}
+
+.menu-bar {
+    border-right: 1px solid #bbb;
+    float: left;
+}
+
+.menu-bar:last-child {
+    border-right: none;
+}
+
+.menu-bar a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 14px 16px;
+    display: block;
+    font-family: "Copperplate Gothic", serif;
+}
+
+.menu-bar:hover {
+    background-color: grey;
+}

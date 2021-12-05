@@ -1,0 +1,76 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.news {
+    border-style: outset;
+    border-color: black;
+    background-color: darkred;
+    max-width: 35em;
+    margin: 9em 10% 3em 30%;
+}
+
+.headline {
+    color: aliceblue;
+    font-size: 3em;
+    padding: 0 1em;
+    text-shadow:  -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+}
+
+.news-writing {
+    font-family: Impact, serif;
+    font-size: x-large;
+    padding: 0 2em;
+}
+
+.check-it-out {
+    margin-left: 3em;
+    margin-bottom: 2em;
+    margin-right: 25em;
+    min-width: 6em;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-style: outset;
+}
+
+.about {
+    border-style: dashed;
+    margin: 6em auto;
+    height: 35em;
+    max-width: 60em;
+    align-content: center;
+    word-wrap: break-word;
+    display: block;
+}
+
+.about-title {
+    text-align: center;
+    padding-top: 1em;
+    font-size: x-large;
+    font-family: "Copperplate Gothic", serif;
+    box-sizing: border-box;
+}
+
+.about-des {
+    padding: 0 30px;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 2em;
+
+}
+
+.contact-info {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2em;
+    line-height: 2em;
+}
