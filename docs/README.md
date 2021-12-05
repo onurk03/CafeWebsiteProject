@@ -6,4 +6,4 @@ on the bottom as a footer.
 
 <ins>Update:</ins> At this point the website has everything except the "order" page completed. I still need to work on making the navigation bar responsive for mobile phones. Once I learn more about back-end programming I'm planning on using Javascript and Java to implement this page and make it functional.
 
-<a href="https://onurk03.github.io/CafeWebsiteProject/" target="_blank"> --> Link to the website <-- </a>
+<a href="https://onurk03.github.io/CafeWebsiteProject/index.html" target="_blank"> --> Link to the website <-- </a>
