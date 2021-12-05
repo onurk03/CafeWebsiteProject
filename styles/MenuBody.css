@@ -22,6 +22,8 @@ html, body {
 }
 
 .menu-category {
+    position: static;
+    overflow: auto;
     padding: 0 2em;
     margin: 0 3em;
 }
@@ -34,7 +36,7 @@ html, body {
 .coffee-img, .sandwich-img {
     width: 375px;
     height: 250px;
-    padding: 2em 10em 3em 4em;
+    padding: 2em 4em 3em 4em;
     float: left;
 }
 
