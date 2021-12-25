@@ -1,3 +1,5 @@
+/*      Navigation Bar Styles
+<-----------------------------------> */
 .nav-bar {
     overflow: auto;
     background-color: white;
@@ -5,7 +7,7 @@
     position: sticky;
     top:0;
     width: auto;
-    opacity: 100!important;
+    opacity: 100;
     border-bottom: 2px solid black;
 }
 

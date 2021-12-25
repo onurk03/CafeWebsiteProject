@@ -1,9 +1,27 @@
+/*       Global Styles
+<---------------------------->*/
 html, body {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
 }
 
+/*       Grid Layout
+<---------------------------->*/
+.menu {
+    display: grid;
+    grid-auto-flow: row;
+    grid-column-start: 1;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: 15;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+
+
+/*       Menu Styles
+<---------------------------->*/
 .menu {
     border-style: outset;
     margin: 3em auto 3em;
@@ -40,7 +58,8 @@ html, body {
     float: left;
 }
 
-
+/*       Contact Info Styles
+<---------------------------->*/
 .contact-us {
     position: relative;
     bottom: 0;
