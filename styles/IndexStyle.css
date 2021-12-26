@@ -10,16 +10,12 @@ html, body {
 <--------------------------------->*/
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-row-gap: 50px;
-    grid-auto-flow: column;
+    grid-template-columns: 1000px;
+    grid-template-rows: 650px 760px 250px;
 }
 
 .grid-item1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 15;
+    grid-column: 1/4;
     background-size: cover;
     background-image: url("../images/grilledcheese1.jpg");
     background-repeat: no-repeat;
@@ -27,20 +23,14 @@ html, body {
 
 .grid-item2 {
 
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 14;
-    grid-row-end: 30;
+    grid-column: 1/4;
     background-color: white;
 
 }
 
 .grid-item3 {
 
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 29;
-    grid-row-end: 35;
+    grid-column: 1/4;
     background-color: rgba(154, 10, 10, 0.90);
     border-top: 2px solid black;
 }
