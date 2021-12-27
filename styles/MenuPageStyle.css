@@ -44,6 +44,9 @@ html, body {
     padding: 2em 4em 3em 4em;
     float: left;
 }
+.menu-end {
+    display: inline-block;
+}
 
 /*       Contact Info Styles
 <---------------------------->*/
@@ -54,7 +57,7 @@ html, body {
 }
 
 .contact-info {
-    font-size: x-large;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding-top: 1em;
