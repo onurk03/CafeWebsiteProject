@@ -3,8 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <title> Kanmaz Café </title>
+    <link rel="stylesheet" href="styles/NavBarStyle.css">
+    <link rel="stylesheet" href="styles/OrderPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="scripts/OrderMenu.js"> </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <h2> In construction... </h2>
+    <!-- Navigation Bar /-->
+
+        <nav id="nav-bar" class="nav-bar">
+            <img class="logo-img" src="images/cafeicon.png" alt="cafeicon">
+            <h1 class="brand-name">   Kanmaz Café </h1>
+            <ul class="nav-list">
+                <li class="menu-bar"> <a href="index.html#Home"> Home </a> </li>
+                <li class="menu-bar"> <a href="index.html#About"> About Us</a> </li>
+                <li class="menu-bar"> <a href="Menu.html"> Menu </a>  </li>
+                <li class="menu-bar"> <a href="Order.html"> Order </a> </li>
+            </ul>
+        </nav>
+
+        <!-- Ordering Menu -->
+
+    <div class="ordering-box">
+        <input class="shopping-cart" type="button"/>
+        <h1 class="order-title"> Menu </h1>
+            <button type="button" class="collapsible"> Sandwiches </button>
+            <div class="content">
+                <p> Grilled Cheese <em>$4.99</em>
+                    <label class="quantity">
+                        <input class="grilledCheese" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart grilledCheese"> Add to Cart </button>
+                </p>
+
+                <p> Avocado Chicken <em>$6.99</em>
+                    <label class="quantity">
+                        <input class="avocadoToast" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart avocadoToast"> Add to Cart </button>
+                </p>
+
+                <p> BLT <em>$5.99</em>
+                    <label class="quantity">
+                        <input class="BLT" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart BLT"> Add to Cart </button>
+                </p>
+
+                <p> Tuna <em>$4.99</em>
+                    <label class="quantity">
+                        <input class="tuna" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart tuna"> Add to Cart </button>
+                </p>
+
+                <p> Turkey <em>$4.99</em>
+                    <label class="quantity">
+                        <input class="turkey" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart turkey"> Add to Cart </button>
+                </p>
+
+                <p> Club <em>$5.99</em>
+                    <label class="quantity">
+                        <input class="club" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart club"> Add to Cart </button>
+                </p>
+
+            </div>
+
+
+            <button type="button" class="collapsible"> Sides </button>
+            <div class="content">
+                <p> French Fries <em>$2.99</em>
+                    <label class="quantity">
+                        <input class="fries" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart fries"> Add to Cart </button>
+                </p>
+
+                <p> Cheese Curds <em>$3.99</em>
+                    <label class="quantity">
+                        <input class="curds" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart curds"> Add to Cart </button>
+                </p>
+
+                <p> Pretzel Bites <em>$2.99</em>
+                    <label class="quantity">
+                        <input class="pretzel" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart pretzel"> Add to Cart </button>
+                </p>
+
+                <p> Boneless Wings (6pc) <em>$6.99</em>
+                    <label class="quantity">
+                        <input class="wings" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart wings"> Add to Cart </button>
+                </p>
+            </div>
+
+            <button type="button" class="collapsible"> Coffee </button>
+            <div class="content">
+                <p> Café Mocha <em>$3.95</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart mocha"> Add to Cart </button>
+                </p>
+
+                <p> Café Latte <em>$3.95</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart latte"> Add to Cart </button>
+                </p>
+
+                <p> Cappuccino <em>$2.95</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart cappuccino"> Add to Cart </button>
+                </p>
+
+                <p> Americano <em>$2.95</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart americano"> Add to Cart </button>
+                </p>
+
+                <p> Double Espresso <em>$2.95</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart espresso"> Add to Cart </button>
+                </p>
+
+
+            </div>
+
+            <button type="button" class="collapsible"> Cold Drinks </button>
+            <div class="content">
+                <p> Soda <em>$1.99</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart soda"> Add to Cart </button>
+                </p>
+
+                <p> Iced Tea <em>$2.99</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart icedtea"> Add to Cart </button>
+                </p>
+
+                <p> Orange Juice <em>$3.99</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart orangejuice"> Add to Cart </button>
+                </p>
+
+                <p> Bottled Water <em>$1.50</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart water"> Add to Cart </button>
+                </p>
+            </div>
+
+            <button type="button" class="collapsible"> Desserts </button>
+            <div class="content">
+                <p> Tiramisu <em>$5.99</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart tiramisu"> Add to Cart </button>
+                </p>
+
+                <p> Ice Cream (Chocolate, Vanilla, Blueberry) <em>$2.99</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart icecream"> Add to Cart </button>
+                </p>
+
+                <p> New York Cheesecake <em>$6.99</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart cheesecake"> Add to Cart </button>
+                </p>
+
+                <p> Fudge Brownie <em>$5.99</em>
+                    <label class="quantity">
+                        <input class="mocha" type="number" min="1" max="9" value="1">
+                    </label>
+                    <button class="add-cart brownie"> Add to Cart </button>
+                </p>
+            </div>
+    </div>
+
+
+        <!-- Contact Us   -->
+        <div id="footer" class="contact-us">
+            <footer id="Contact" class="contact-info"> <u>Contact Us: </u><br> Email: kanmazcafe@gmail.com <br> Phone: 608-333-4444 </footer>
+        </div>
 </body>
 </html>

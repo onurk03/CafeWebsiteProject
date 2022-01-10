@@ -119,3 +119,12 @@ html, body {
     padding-bottom: 1em;
     line-height: 2em;
 }
+
+
+@media screen and (max-width: 1000px) {
+    .grid-item3{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
