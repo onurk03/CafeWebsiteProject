@@ -70,6 +70,10 @@ html, body {
     border-style: outset;
 }
 
+.check-it-out:active {
+    border-style: inset;
+}
+
 
 @media screen and (max-width: 1000px){
     .check-it-out {
