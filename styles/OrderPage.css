@@ -79,9 +79,16 @@ html, body {
     float: right;
     margin-top: 2px;
 }
-.shopping-cart {
+
+/*       Shopping Cart Styles
+<---------------------------->*/
+.cart-box {
     position: absolute;
     right: 5%;
+    padding-right: 12px;
+    padding-top: 5px;
+}
+.shopping-cart {
     background: url("../icons/cart.svg") center no-repeat transparent;
     cursor: pointer;
     padding: 40px 25px 0;
@@ -91,6 +98,25 @@ html, body {
 .shopping-cart:hover {
     background-color: #ccc;
     border-radius: 5px;
+}
+#cart-quantity {
+    z-index: 1;
+    color: white;
+    background-color: red;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px black solid;
+    border-radius: 50%;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+}
+
+#cart-quantity.cart-added {
+    display: inline;
 }
 
 /*       Contact Info Styles
