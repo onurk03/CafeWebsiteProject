@@ -1,5 +1,5 @@
 // Collapsible Menu Implementation
-let collapsibleMenu = document.getElementsByClassName("collapsible");
+let collapsibleMenu = document.querySelectorAll(".collapsible");
 let i;
 
 for(i = 0; i < collapsibleMenu.length; i++) {
@@ -40,10 +40,13 @@ let prices = [
 
 let cart = [];
 
-let cartQuantity = document.getElementById("cart-quantity");
+let cartQuantity = document.querySelector("#cart-quantity");
 let cartCount = 0;
 
-let addToCart = document.getElementsByClassName("add-cart");
+// Loops through all items in the cafe and adds an event listener to each of their buttons. The
+// event listener makes each item's "Add to Cart" buttons create and push a menuItem object type
+// of the corresponding item into the cart list when clicked.
+let addToCart = document.querySelectorAll(".add-cart");
 for(let i = 0; i < addToCart.length ; i++) {
     addToCart[i].addEventListener("click",  function() {
         let quantities = document.getElementsByClassName("item-quantity");
