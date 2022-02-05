@@ -69,9 +69,49 @@ for(let i = 0; i < addToCart.length ; i++) {
         // Save cart to local storage
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        // Save the time the last item was added to the cart
-        let timeAdded = Date.now() / 60000;
-        localStorage.setItem('timeAdded', JSON.stringify(timeAdded));
+        // Warn the user after 5 minutes that they haven't checked out in 5 minutes.
+        setTimeout(function() {
+            document.querySelector(".alert-popup").innerHTML = `
+            <h2> Alert</h2>
+            <p> You haven't checked out in 5 minutes, your cart information will disappear after 25
+                minutes.</p>
+            <button type="button"> OK!</button>
+        `;
+            document.querySelector(".alert-popup").style.display = "inline";
+
+            // Button to close alert popup about 5 minutes checkout inactivity
+            let alertButton = document.querySelector(".alert-popup button");
+
+            alertButton.addEventListener('click', function() {
+                document.querySelector(".alert-popup").style.display = "none";
+            });
+        }, 5 * 60000);
+
+
+        // Erase the cart info on page reload 30 minutes after adding the last cart item
+        setTimeout(function() {
+
+            localStorage.removeItem('cart');
+            localStorage.removeItem('cartCount');
+
+            document.querySelector(".alert-popup").innerHTML = `
+            <h2> Alert</h2>
+            <p> You haven't checked out in 30 minutes, therefore your cart information has disappeared.</p>
+            <button type="button"> OK!</button>
+        `;
+
+            document.querySelector(".alert-popup").style.display = "inline";
+
+            // Button that confirms cart information disappearance after 30 mins
+            let alertButton = document.querySelector(".alert-popup button");
+
+            alertButton.addEventListener('click', function() {
+                document.querySelector(".alert-popup").style.display = "none";
+                location.reload();
+            });
+
+        }, 30 * 60000);
+
     });
 }
 
@@ -82,23 +122,7 @@ if (localStorage.getItem('cartCount') > 0) {
     cartQuantity.innerHTML = localStorage.getItem('cartCount');
 }
 
-// Warn the user after 5 minutes that they haven't checked out in 5 minutes.
-// Erase the cart info on page reload 30 minutes after adding the last cart item
-if(localStorage.length >= 3) {
-    let timeNow = Date.now() / 60000;
-    let timeDif = timeNow - JSON.parse(localStorage.getItem('timeAdded'));
-    if(timeDif === 5) {
-        document.querySelector(".alert-popup").style.display = "inline";
-    }
-    if (timeDif >= 30) {
-        localStorage.removeItem('cart');
-        localStorage.removeItem('cartCount');
-    }
-}
 
-// Button to close alert popup about 5 minutes checkout inactivity
-let alertButton = document.querySelector(".alert-popup button");
 
-alertButton.addEventListener('click', function() {
-    document.querySelector(".alert-popup").style.display = "none";
-});
+
+
