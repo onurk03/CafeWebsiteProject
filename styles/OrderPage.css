@@ -9,6 +9,46 @@ html, body {
     scroll-behavior: smooth;
 }
 
+.alert-popup {
+    display: none;
+    font-family: "Gill Sans MT", serif;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    z-index: 10;
+    width: 30%;
+    height: 25%;
+    border: inset black 1px;
+    background-color: white;
+}
+
+.alert-popup h2 {
+    text-decoration: underline;
+}
+
+.alert-popup p {
+    line-height: 30px;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.alert-popup button {
+    cursor: pointer;
+    border-style: outset;
+    margin: 5% auto;
+    padding: 5px 20px;
+}
+
+.alert-popup button:hover {
+    background-color: grey;
+}
+
+.alert-popup button:active {
+    border-style: inset;
+}
+
 
 /*       Ordering Menu Styles
 <--------------------------------->*/

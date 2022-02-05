@@ -13,6 +13,7 @@ for(i = 0; i < collapsibleMenu.length; i++) {
         }
     });
 }
+
 // Cart Implementation
 class menuItem {
     constructor(name,price,quantity) {
@@ -43,6 +44,13 @@ let cart = [];
 let cartQuantity = document.querySelector("#cart-quantity");
 let cartCount = 0;
 
+// If there are items already stored in the local storage, assign them to the default cart and
+// cartCount variables.
+if(localStorage.length > 1) {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    cartCount = JSON.parse(localStorage.getItem('cartCount'))
+}
+
 // Loops through all items in the cafe and adds an event listener to each of their buttons. The
 // event listener makes each item's "Add to Cart" buttons create and push a menuItem object type
 // of the corresponding item into the cart list when clicked.
@@ -53,9 +61,44 @@ for(let i = 0; i < addToCart.length ; i++) {
         let item = new menuItem(menuItems[i], prices[i], quantities[i].value);
         cart.push(item);
         cartCount += parseInt(quantities[i].value);
-        cartQuantity.innerHTML = cartCount;
+        // Save the new cart item count to storage and assign it on the HTML on button click
+        localStorage.setItem('cartCount', cartCount);
         cartQuantity.style.display = "inline";
+        cartQuantity.innerHTML = localStorage.getItem('cartCount');
+
+        // Save cart to local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Save the time the last item was added to the cart
+        let timeAdded = Date.now() / 60000;
+        localStorage.setItem('timeAdded', JSON.stringify(timeAdded));
     });
 }
 
-console.log(cart);
+
+// Display the cart item count on page reload if it's more than 0;
+if (localStorage.getItem('cartCount') > 0) {
+    cartQuantity.style.display = "inline";
+    cartQuantity.innerHTML = localStorage.getItem('cartCount');
+}
+
+// Warn the user after 5 minutes that they haven't checked out in 5 minutes.
+// Erase the cart info on page reload 30 minutes after adding the last cart item
+if(localStorage.length >= 3) {
+    let timeNow = Date.now() / 60000;
+    let timeDif = timeNow - JSON.parse(localStorage.getItem('timeAdded'));
+    if(timeDif === 5) {
+        document.querySelector(".alert-popup").style.display = "inline";
+    }
+    if (timeDif >= 30) {
+        localStorage.removeItem('cart');
+        localStorage.removeItem('cartCount');
+    }
+}
+
+// Button to close alert popup about 5 minutes checkout inactivity
+let alertButton = document.querySelector(".alert-popup button");
+
+alertButton.addEventListener('click', function() {
+    document.querySelector(".alert-popup").style.display = "none";
+});
