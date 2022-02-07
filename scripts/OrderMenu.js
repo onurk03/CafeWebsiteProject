@@ -51,17 +51,18 @@ if(localStorage.length > 1) {
     cartCount = JSON.parse(localStorage.getItem('cartCount'))
 }
 
-// Loops through all items in the cafe and adds an event listener to each of their buttons. The
-// event listener makes each item's "Add to Cart" buttons create and push a menuItem object type
-// of the corresponding item into the cart list when clicked.
+// Loops through all items in the cafe and adds an event listener to each of their buttons.
 let addToCart = document.querySelectorAll(".add-cart");
 for(let i = 0; i < addToCart.length ; i++) {
     addToCart[i].addEventListener("click",  function() {
+        // create and push a menuItem object type of the corresponding item into the cart list
+        // when clicked.
         let quantities = document.getElementsByClassName("item-quantity");
         let item = new menuItem(menuItems[i], prices[i], quantities[i].value);
         cart.push(item);
         cartCount += parseInt(quantities[i].value);
-        // Save the new cart item count to storage and assign it on the HTML on button click
+
+        // Save the new cart item count to local storage and assign it on the HTML on button click
         localStorage.setItem('cartCount', cartCount);
         cartQuantity.style.display = "inline";
         cartQuantity.innerHTML = localStorage.getItem('cartCount');
@@ -88,7 +89,7 @@ for(let i = 0; i < addToCart.length ; i++) {
         }, 5 * 60000);
 
 
-        // Erase the cart info on page reload 30 minutes after adding the last cart item
+        // Erase the cart info 30 minutes after adding the last cart item
         setTimeout(function() {
 
             localStorage.removeItem('cart');
@@ -107,6 +108,7 @@ for(let i = 0; i < addToCart.length ; i++) {
 
             alertButton.addEventListener('click', function() {
                 document.querySelector(".alert-popup").style.display = "none";
+                // Reloads page for changes to be visible
                 location.reload();
             });
 
@@ -115,8 +117,7 @@ for(let i = 0; i < addToCart.length ; i++) {
     });
 }
 
-
-// Display the cart item count on page reload if it's more than 0;
+// Display the number of cart items on page reload if it's more than 0;
 if (localStorage.getItem('cartCount') > 0) {
     cartQuantity.style.display = "inline";
     cartQuantity.innerHTML = localStorage.getItem('cartCount');

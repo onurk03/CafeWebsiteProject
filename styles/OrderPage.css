@@ -71,7 +71,7 @@ html, body {
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    min-width: 250px;
+    min-width: 580px;
     margin-top: 1%;
     border: none;
     text-align: center;
@@ -95,6 +95,7 @@ html, body {
     overflow: hidden;
     background-color: white;
     max-height: 0;
+    min-width: 540px;
     transition: max-height 0.2s ease-out;
 }
 
@@ -120,7 +121,7 @@ html, body {
     margin-top: 2px;
 }
 
-/*       Shopping Cart Styles
+/* Shopping Cart Icon Styles
 <---------------------------->*/
 .cart-box {
     position: absolute;
