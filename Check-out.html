@@ -5,10 +5,10 @@
     <title> Kanmaz Café </title>
     <link rel="stylesheet" href="styles/NavBarStyle.css">
     <link rel="stylesheet" href="styles/CheckoutStyle.css">
+    <script defer src="scripts/CheckOut.js"> </script>
 </head>
 <body>
     <!-- Navigation Bar /-->
-
     <nav id="nav-bar" class="nav-bar">
         <img class="logo-img" src="images/cafeicon.png" alt="cafeicon">
         <h1 class="brand-name">  Kanmaz Café </h1>
@@ -19,6 +19,28 @@
             <li class="menu-bar"> <a href="Order.html"> Order </a> </li>
         </ul>
     </nav>
-    <h1> Under Construction... </h1>
+    <div class="check-out-box">
+        <div class="items-box">
+        </div>
+        <label class="card-info">
+            <input type="text" placeholder="Credit Card Number">
+            <input type="text" placeholder="CVV">
+            <input type="text" placeholder="MM/YY">
+            <input type="text" placeholder="Zip">
+            <input type="text" placeholder="Cardholder Name" name="name">
+            <button class="check-out-button"> Check Out </button>
+        </label>
+    </div>
+    <div class="result-box">
+        <div class="processing">
+            <div class="check-icon draw"></div>
+        </div>
+        <p class="result-text"></p>
+    </div>
+
+    <!-- Contact Us   -->
+    <div id="footer" class="contact-us">
+        <footer id="Contact" class="contact-info"> <u>Contact Us: </u><br> Email: kanmazcafe@gmail.com <br> Phone: 608-333-4444 </footer>
+    </div>
 </body>
 </html>

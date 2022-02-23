@@ -1,4 +1,161 @@
+/*         Global Styles
+<--------------------------------->*/
 html, body {
     margin: 0;
     padding: 0;
+}
+
+/*      Checkout Box Styles
+<---------------------------->*/
+.check-out-box {
+    margin: 5% auto;
+    width: 500px;
+    height: 700px;
+    border: black 3px solid;
+    padding-top: 10px;
+}
+
+.items-box {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 500px;
+    height: 500px;
+}
+
+.check-out-item {
+    background-color: white;
+    min-width: 430px;
+    border: grey 1px solid;
+    padding: 20px;
+    margin: 0;
+}
+
+.item-quantity {
+    float: right;
+}
+
+.card-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin: 5%;
+}
+
+.card-info input {
+    padding: 10px;
+}
+
+.check-out-button {
+    width: 39%;
+    cursor: pointer;
+    background-color: rgb(154, 10, 10);
+    color: white
+}
+.result-box {
+    position: relative;
+    text-align: center;
+    margin: 15% auto;
+}
+
+.processing {
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 10px solid #dddddd;
+    border-top-color: rgb(154, 10, 10);
+    border-radius: 50%;
+    animation: processing 1s linear 1 forwards;
+}
+
+@keyframes processing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        opacity: 1;
+        background: rgb(154, 10, 10);
+        border-color: rgb(154, 10, 10);
+    }
+}
+
+.check-icon {
+    display: none;
+}
+
+.check-icon.draw:after {
+    animation: check-icon 800ms ease;
+    transform: scaleX(-1) rotate(135deg);
+}
+
+.check-icon:after {
+    opacity: 1;
+    height: 2.3em;
+    width: 0.8em;
+    transform-origin: left top;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    content: "";
+    top: 60%;
+    left: 15%;
+    position: absolute;
+}
+
+@keyframes check-icon {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+    20% {
+        height: 0;
+        width: 0.8em;
+        opacity: 1;
+    }
+    40% {
+        height: 2.3em;
+        width: 0.8em;
+        opacity: 1;
+    }
+    100% {
+        height: 2.3em;
+        width: 0.8em;
+        opacity: 1;
+    }
+}
+
+.result-text {
+    margin-top: 100px;
+    width: 100%;
+    font-size: 2em;
+}
+
+/*       Contact Info Styles
+<---------------------------->*/
+.contact-us {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-info {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 2em;
+    background-color: rgba(154, 10, 10, 0.90);
+    border-top: 2px solid black;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact-us{
+        position: absolute;
+    }
 }
