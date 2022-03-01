@@ -1,7 +1,7 @@
 # CafeWebsiteProject
 <ins>About</ins>
 
-I'm trying to build a concept café website for practice purposes. The finished project will have a "home" page, a "menu" page, and a functional "order" page.
+A concept café website front-end for practice purposes. This project has a "home" page, a "menu" page, and an "order" page.
 I will be learning about different layout styles, javascript implementations, and reponsive web design as I progress.
 
 (02/22/22) <ins>Update</ins> 
