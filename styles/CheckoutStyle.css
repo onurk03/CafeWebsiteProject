@@ -33,8 +33,21 @@ html, body {
     margin: 0;
 }
 
-.item-quantity {
+.remove-item {
+    font-size: 1em;
+    background: none;
+    border: none;
     float: right;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    border-radius: 10px;
+    background-color: grey;
+}
+
+.item-quantity {
+
 }
 
 .card-info {
@@ -55,6 +68,9 @@ html, body {
     background-color: rgb(154, 10, 10);
     color: white
 }
+
+/*      Check-out Result
+<---------------------------->*/
 .result-box {
     position: relative;
     text-align: center;
