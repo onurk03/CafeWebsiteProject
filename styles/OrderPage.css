@@ -99,7 +99,7 @@ html, body {
     overflow: hidden;
     background-color: white;
     max-height: 0;
-    min-width: 540px;
+    min-width: 100%;
     transition: max-height 0.2s ease-out;
 }
 
