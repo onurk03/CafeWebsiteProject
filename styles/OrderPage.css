@@ -62,34 +62,38 @@ html, body {
 .ordering-box {
     display: inline-block;
     width: 50%;
-    margin: 5vh 24vw 34vh;
+    margin: 5% 25% 34%;
 }
+
 .collapsible {
     left: 0;
     background-color: #eee;
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
-    min-width: 580px;
+    min-width: 100%;
     margin-top: 1%;
     border: none;
     text-align: center;
     outline: none;
     font-size: 30px;
 }
+
 .collapsible:after {
     content: '\02795';
     font-size: 20px;
     float: right;
     margin-left: auto;
 }
+
 .collapsed:after {
     content: "\2796";
 }
+
 .collapsed, .collapsible:hover {
     background-color: #ccc;
 }
+
 .content {
     padding: 0 18px;
     overflow: hidden;
@@ -103,7 +107,6 @@ html, body {
     border-style: solid;
     padding: 20px;
 }
-
 
 .content p button {
     background-color: rgb(154, 10, 10);
