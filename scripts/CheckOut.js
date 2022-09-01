@@ -16,6 +16,13 @@ checkOut.addEventListener("click", () => {
 
 if(localStorage.length > 1) {
     cart = JSON.parse(localStorage.getItem('cart'));
+    if(cart.length === 0) {
+        document.querySelector(".items-box").innerHTML =
+            `<p class="noItemsAlert"> You have no items added to your cart!</p>`;
+    }
+} else {
+    document.querySelector(".items-box").innerHTML =
+        `<p class="noItemsAlert"> You have no items added to your cart!</p>`;
 }
 
 for(let i = 0; i < cart.length; i++) {
@@ -37,6 +44,7 @@ removeButton.forEach((button) =>
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("cartCount", parseInt(localStorage.getItem("cartCount")) - 1);
     document.querySelector(index).remove();
+    location.reload();
 }));
 
 

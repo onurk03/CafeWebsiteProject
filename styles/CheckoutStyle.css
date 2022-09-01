@@ -46,10 +46,6 @@ html, body {
     background-color: grey;
 }
 
-.item-quantity {
-
-}
-
 .card-info {
     display: flex;
     flex-wrap: wrap;
@@ -60,13 +56,18 @@ html, body {
 
 .card-info input {
     padding: 10px;
+    width: 35%;
 }
 
 .check-out-button {
-    width: 39%;
+    width: 40%;
     cursor: pointer;
     background-color: rgb(154, 10, 10);
     color: white
+}
+
+.noItemsAlert {
+    font-size: large;
 }
 
 /*      Check-out Result
@@ -160,7 +161,7 @@ html, body {
 }
 
 .contact-info {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     padding-top: 1em;
@@ -168,10 +169,4 @@ html, body {
     line-height: 2em;
     background-color: rgba(154, 10, 10, 0.90);
     border-top: 2px solid black;
-}
-
-@media screen and (max-width: 1000px) {
-    .contact-us{
-        position: absolute;
-    }
 }
